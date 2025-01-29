@@ -1,0 +1,11 @@
+PROGRAMME exemple;
+{Ce prog réalise le carré}
+VAR nb;
+CONST x = 10;
+DEBUT
+	ECRIRE('Aujourd\'hui Enter un nombre entier');
+	LIRE(nb);
+	n = nb*nb
+	ECRIRE();
+	ECRIRE('Le carre du nombre est: ', nb);
+FIN.

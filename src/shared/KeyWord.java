@@ -1,10 +1,8 @@
 package shared;
 
-public enum KeyWord {
-    DEBUT,
-    FIN,
-    VAR,
-    ECRIRE,
-    LIRE,
-    SI
+public class KeyWord {
+
+    public static boolean isKeyWord(String word) {
+        return Global.getTableMotsReserve().contains(word);
+    }
 }
