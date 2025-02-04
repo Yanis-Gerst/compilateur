@@ -3,7 +3,7 @@ PROGRAMME exemple;
 VAR nb;
 CONST x = 10;
 DEBUT
-	ECRIRE('Aujourd\'hui Enter un nombre entier');
+	ECRIRE('Entrer un nombre entier');
 	LIRE(nb);
 	n = nb*nb
 	ECRIRE();

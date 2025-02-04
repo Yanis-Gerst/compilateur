@@ -14,6 +14,7 @@ public class LexicalAnalyser {
     public void init() {
         Global.setNumLigne(0);
         Global.setSource("src/mini-pascal.txt");
+//        Global.initTableMotsReserves();
         SourceReader myFileReader = new SourceReader();
         this.reader = myFileReader;
         myFileReader.lireCar();

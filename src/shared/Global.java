@@ -68,4 +68,22 @@ public class Global {
     public static void setTableMotsReserve(List<String> tableMotsReserve) {
         Global.tableMotsReserve = tableMotsReserve;
     }
+
+//    private static void insereTableMotsReserves(String mot) {
+//        // Recherche de la position d'insertion pour maintenir l'ordre alphabétique
+//        int i = 0;
+//        while (i < tableMotsReserve.size() && tableMotsReserve.get(i).compareTo(mot) < 0) {
+//            i++;
+//        }
+//        tableMotsReserve.add(i, mot);
+//    }
+//
+//    public static void initTableMotsReserves() {
+//        tableMotsReserve.clear();
+//        String[] mots = {"PROGRAMME", "DEBUT", "FIN", "CONST", "VAR", "ECRIRE", "LIRE"};
+//        for (String mot : mots) {
+//            insereTableMotsReserves(mot);
+//        }
+//    }
 }
+
