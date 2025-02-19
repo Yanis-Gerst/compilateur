@@ -5,7 +5,7 @@ CONST x = 10;
 DEBUT
 	ECRIRE('Entrer un nombre entier');
 	LIRE(nb);
-	n = nb*nb
+	n = nb*nb;
 	ECRIRE();
 	ECRIRE('Le carre du nombre est: ', nb);
 FIN.

@@ -9,7 +9,7 @@ public class ErrorHandler {
     public static final int EXCEED_LENGTH_INT = 4;
 
     public static void raiseError(Integer errorNumber) {
-        throw new RuntimeException("Error: " + errorNumber + " " + getMessage(errorNumber) + "\n In line: " + Global.getNumLigne());
+        throw new RuntimeException("Error: " + errorNumber + " " + getMessage(errorNumber) + "\n In line: " + Global.getNumLigne() + " " + Global.getCarlu());
     }
 
     private static String getMessage(Integer errorNumber) {

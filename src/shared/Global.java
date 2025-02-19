@@ -1,5 +1,7 @@
 package shared;
 
+import lexicalAnalyser.LexicalAnalyser;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,6 +10,8 @@ import java.util.List;
 public class Global {
     private static String source;
     private static Character carlu;
+
+    private static LexicalUnit unilex;
     private static Integer nombre;
     private static String chaine; //A changer en un type ENUM
     private static Integer numLigne = 0;
@@ -59,8 +63,7 @@ public class Global {
 
     public static List<String> getTableMotsReserve() {
         if (tableMotsReserve.isEmpty()) {
-            String[] mots = {"DEBUT", "FIN", "VAR", "ECRIRE", "LIRE", "SI", "PROGRAMME", "CONST"};
-            tableMotsReserve.addAll(Arrays.asList(mots));
+           initTableMotsReserves();
         }
         return tableMotsReserve;
     }
@@ -69,21 +72,29 @@ public class Global {
         Global.tableMotsReserve = tableMotsReserve;
     }
 
-//    private static void insereTableMotsReserves(String mot) {
-//        // Recherche de la position d'insertion pour maintenir l'ordre alphabétique
-//        int i = 0;
-//        while (i < tableMotsReserve.size() && tableMotsReserve.get(i).compareTo(mot) < 0) {
-//            i++;
-//        }
-//        tableMotsReserve.add(i, mot);
-//    }
-//
-//    public static void initTableMotsReserves() {
-//        tableMotsReserve.clear();
-//        String[] mots = {"PROGRAMME", "DEBUT", "FIN", "CONST", "VAR", "ECRIRE", "LIRE"};
-//        for (String mot : mots) {
-//            insereTableMotsReserves(mot);
-//        }
-//    }
+    private static void insereTableMotsReserves(String mot) {
+        // Recherche de la position d'insertion pour maintenir l'ordre alphabétique
+        int i = 0;
+        while (i < tableMotsReserve.size() && tableMotsReserve.get(i).compareTo(mot) < 0) {
+            i++;
+        }
+        tableMotsReserve.add(i, mot);
+    }
+
+    public static LexicalUnit getUnilex() {
+        return unilex;
+    }
+
+    public static void setUnilex(LexicalUnit unilex) {
+        Global.unilex = unilex;
+    }
+
+    public static void initTableMotsReserves() {
+        tableMotsReserve.clear();
+        String[] mots = {"PROGRAMME", "DEBUT", "FIN", "CONST", "VAR", "ECRIRE", "LIRE"};
+        for (String mot : mots) {
+            insereTableMotsReserves(mot);
+        }
+    }
 }
 
